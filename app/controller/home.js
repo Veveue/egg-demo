@@ -13,6 +13,25 @@ class HomeController extends Controller {
   async index() {
     // this.ctx.body = "你好egg.js";
 
+    // 调用extend里面扩展的application
+
+    console.log(this.app.foo());
+
+    // 调用extend里面扩展的ctx
+
+    console.log(this.ctx.getHost());
+
+    // 调用extend里面扩展的helper的方法
+
+    console.log(this.ctx.helper.getHelperData());
+    // 调用extend里面扩展的helper的方法
+
+    // console.log(this.ctx.helper.formatTime());
+
+    // 调用extend 扩展request的方法
+
+    console.log(this.ctx.request.foo());
+
     await this.ctx.render("index");
   }
 }
