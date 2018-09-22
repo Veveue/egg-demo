@@ -5,7 +5,7 @@ module.exports = appInfo => {
   config.keys = `${appInfo.name}_1532511512428_3477`;
 
   // add your config here
-  config.middleware = ["gzip", "getIp"];
+  config.middleware = ["gzip", "getIp", "auth"];
 
   // 配置 gzip 中间件的配置
   config.zip = {

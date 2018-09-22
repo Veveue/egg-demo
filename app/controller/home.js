@@ -32,6 +32,18 @@ class HomeController extends Controller {
 
     console.log(this.ctx.request.foo());
 
+    // https://eggjs.org/zh-cn/core/cookie-and-session.html
+    this.ctx.cookies.set("username", "test", {
+      maxAge: 1000 * 3600 * 24, // 最长保存时间
+      signed: true, // 防止前端对这个值进行篡改。默认为 true
+      encrypt: true, // 加密cookies。加密后可以设置中文值 默认为 false
+    });
+
+    // 获取加密cookie
+    this.ctx.cookies.get("username", {
+      encrypt: true,
+    });
+
     await this.ctx.render("index");
   }
 }

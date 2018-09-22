@@ -7,7 +7,6 @@ class AdminController extends Controller {
     // koa给用户相应信息
     // ctx.body='用户管理';
     console.log(this);
-
     // egg给用户相应信息
     this.ctx.body = "用户管理";
   }
