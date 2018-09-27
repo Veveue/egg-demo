@@ -4,10 +4,11 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "dayjs": "^1.7.5",
     "egg": "^2.2.1",
     "egg-scripts": "^2.5.0",
     "egg-view-ejs": "^2.0.0",
-    "dayjs": "^1.7.5",
+    "egg-view-react": "^1.1.0",
     "zlib": "^1.0.5"
   },
   "devDependencies": {
